@@ -24,6 +24,7 @@ cv2.setTrackbarPos("Upper- V","TrackBar",255)
 
 while True:
     ret,frame=cap.read()
+    #This code prevent mirror effection , It turns images opposite
     frame=cv2.flip(frame,1)
 
     frame_hsv=cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
